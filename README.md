@@ -35,28 +35,6 @@ A partir del dataset tratado en la Parte 1, se implementarán modelos de Machine
 
 ---
 
-## 📂 Estructura Inicial del Proyecto
-```plaintext
-challenge_telecom_x_part2/
-│
-├── data/                     # Datasets tratados y archivos adicionales
-│   ├── telecomx_clean.csv    # Dataset limpio de la Parte 1
-│
-├── notebooks/                # Notebooks de análisis y modelado
-│   └── challenge_telecom_x_part2.ipynb
-│
-├── src/                      # Scripts reutilizables
-│   ├── preprocessing.py
-│   └── modeling.py
-│
-├── outputs/                  # Gráficos y reportes generados
-│
-├── README.md                 # Documentación del proyecto
-├── requirements.txt          # Librerías necesarias
-└── .gitignore                # Archivos a ignorar por Git
-
----
-
 ## 📄 Entregables Finales
 - Notebook con análisis, modelado y conclusiones.
 - Dataset listo para uso predictivo.
