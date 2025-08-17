@@ -58,6 +58,7 @@ challenge-telecom-x-part2/
 ---
 
 ## 📊 Descripción de los datos
+
 La base de datos utilizada proviene de la etapa anterior del presente proyecto, donde se realizó exploración y limpieza de los datos, los cuales pueden obtenerse en el siguiente enlace:
 
 <a href="https://github.com/edwber2205/challenge-telecom-x-part2/tree/main/src">Contenedor Base de Datos</a>
@@ -129,6 +130,7 @@ Este enfoque no solo permitió construir un modelo predictivo sólido, sino tamb
 ---
 
 ## 🛠 Herramientas y Tecnologías
+
 - **Lenguaje:** Python  
 - **Librerías:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost 
 - **Control de Versiones:** Git y GitHub
@@ -137,6 +139,7 @@ Este enfoque no solo permitió construir un modelo predictivo sólido, sino tamb
 ---
 
 ## 🚀 Flujo de Trabajo Propuesto
+
 1. **Carga de datos tratados** (desde el proyecto Parte 1).
 2. **Preparación adicional** para modelos (normalización, codificación, etc.).
 3. **Análisis exploratorio y correlación** de variables.
@@ -147,6 +150,7 @@ Este enfoque no solo permitió construir un modelo predictivo sólido, sino tamb
 ---
 
 ## 📅 Gestión del Proyecto
+
 Se utilizará **Trello** como herramienta de colaboración y gestión de tareas, siguiendo las fases y pasos definidos en el tablero del desafío.
 
 ---
@@ -160,6 +164,7 @@ Se utilizará **Trello** como herramienta de colaboración y gestión de tareas,
 ---
 
 ## 📄 Entregables Finales
+
 - Notebook con análisis, modelado y conclusiones.
 - Dataset listo para uso predictivo.
 - Visualizaciones y métricas clave.
@@ -168,6 +173,7 @@ Se utilizará **Trello** como herramienta de colaboración y gestión de tareas,
 ---
 
 ## 👏 Créditos y Reconocimientos
+
 Este proyecto está basado en los datos tratados en el **Challenge Telecom X Parte 1**.  
 Fue desarrollado con base en el cuaderno compartido por **Ignacio Majo** compañero de grupo de estudio, a quien agradezco por el aporte en la estructura y el enfoque del análisis.  
 Se ha adaptado y enriquecido con explicaciones, visualizaciones y mejoras propias como parte del aprendizaje individual en ciencia de datos.
@@ -175,6 +181,7 @@ Se ha adaptado y enriquecido con explicaciones, visualizaciones y mejoras propia
 ---
 
 ## 📬 Contacto
+
 👤 Autor: Edwin Berrío - Analista de datos junior
 Repositorio: github.com/edwber2205
 Proyecto: Challenge Telecom X - Parte 2
