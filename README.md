@@ -25,7 +25,7 @@ A partir del dataset tratado en la Parte 1, se implementarán modelos de Machine
 ## 📊 Descripción de los datos
 La base de datos utilizada proviene de la etapa anterior del presente proyecto, donde se realizó exploración y limpieza de los datos, los cuales pueden obtenerse en el siguiente enlace:
 
-<a href="https://github.com/ignaciomajo/proyecto_TelecomX/tree/main/src">Contendero Base de Datos</a>
+<a href="https://github.com/ignaciomajo/proyecto_TelecomX/tree/main/src">Contenedor Base de Datos</a>
 
 📄 Se tomaron los archivos: 
 
