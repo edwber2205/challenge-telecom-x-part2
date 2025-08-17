@@ -22,17 +22,66 @@ A partir del dataset tratado en la Parte 1, se implementarán modelos de Machine
 
 ---
 
+## 📁 Estructura del Proyecto
+
+Este proyecto sigue una estructura organizada para facilitar la comprensión y el acceso a los diferentes elementos:
+
+📁 challenge-telecom-x-part2
+├── 📄 proyecto_telecomX_ML.ipynb
+├── 📁 src/ # Contiene el dataset tratado y otros scripts auxiliares
+│   └── 📄 preprocessed_TelecomX_data.json
+    └── 📄 clientes_altovalor_abandonan.json
+    └── 📄 datos_artificiales_labeled.json
+    └── 📄 datos_artificiales_proba.json
+├── 📁 img/ # Carpeta para guardar visualizaciones generadas
+│   └── 📄 grafico_importante.png
+├── 📁 models/ # Modelos entrenados y serializados
+│   └── 📄 best_knn.pkl
+    └── 📄 best_logreg.pkl
+    └── 📄 best_randomforest.pkl
+    └── 📄 best_svm.pkl
+    └── 📄 best_xgb.pkl
+    └── 📄 features_best_logreg.pkl
+├── 📁 reports/ # Reportes y análisis generados
+│   └── 📄 informe_prevencion_churn.pdf
+    └── 📄 informe_prevencion_churn.pptx
+├── 📁 champion/ # Carpeta para producción y monitoreo del modelo final (champion)
+│   └── 📁 log/
+│       ├── 📁 production/ # Modelos y logs de producción
+│       └── 📁 monitor/ # Logs para monitoreo del modelo
+├── 📄 requirements.txt # Lista de dependencias necesarias para ejecutar el proyecto
+└── 📄 README.md # Documentación del proyecto 
+
+---
+
 ## 📊 Descripción de los datos
 La base de datos utilizada proviene de la etapa anterior del presente proyecto, donde se realizó exploración y limpieza de los datos, los cuales pueden obtenerse en el siguiente enlace:
 
-<a href="https://github.com/ignaciomajo/proyecto_TelecomX/tree/main/src">Contenedor Base de Datos</a>
+<a href="https://github.com/edwber2205/challenge-telecom-x-part2/tree/main/src">Contenedor Base de Datos</a>
 
-📄 Se tomaron los archivos: 
+📄 Ruta de donde se tomaron los archivos: 
 
-* <a href="https://raw.githubusercontent.com/ignaciomajo/proyecto_TelecomX/refs/heads/main/src/preprocessed_TelecomX_data.json">preprocessed_TelecomX_data.json</a>
-* <a href="https://raw.githubusercontent.com/ignaciomajo/proyecto_TelecomX/refs/heads/main/src/clientes_altovalor_abandonan.json">clientes_altovalor_abandonan.json</a>
+* <a href="https://raw.githubusercontent.com/edwber2205/challenge-telecom-x-part2/refs/heads/main/src/preprocessed_TelecomX_data.json">preprocessed_TelecomX_data.json</a>
+* <a href="https://raw.githubusercontent.com/edwber2205/challenge-telecom-x-part2/refs/heads/main/src/clientes_altovalor_abandonan.json">clientes_altovalor_abandonan.json</a>
 
 Ambos archivos se integraron en un único dataset de **7152 observaciones**. El archivo **clientes_altovalor_abandonan.json** contiene los clientes identificados como outliers en la etapa anterior, que, aunque fueron apartados para un análisis aislado, se incluyeron en este proyecto para representar con mayor fidelidad el patrón general de comportamiento del cliente.
+
+### Pipeline de prueba
+
+Finalmente, se desarrolló la simulación de un pipeline para la implementación del modelo en entorno productivo, utilizando datos sintéticos generados con la técnica `SMOTENC` (tomando una muestra que respete la distribución origianl de los datos).
+El mismo, recibe un archivo JSON (formato original de la base de datos) con datos crudos (sin ninguna transformación) para producir predicciones.
+Cuenta con dos modos de utilización:
+
+* `mode='production'`: que devuelve un archivo JSON con `CustomerID`, `Probabilidad Churn` y `Churn` *(Etiqueta: si Probabilidad Churn >= 0.39, Churn = 1, si Probabilidad Churn < 0.39, Churn = 0)*
+* `mode='monitor'`: devuelve un archivo JSON con un campo con fecha y hora de ejecución del monitoreo (`Model`), sus métricas `Accuracy`, `Precision`, `Recall` y `F1-score`, para umbral de decisión por defecto y umbral de decisión modificado, y tiempo de predicción.
+
+Dicho pipeline realiza las transformaciones necesarias sobre los datos crudos utilizando los artefactos creados a lo largo del proyecto.
+
+Los resultados pueden verse en:
+* <a href="https://github.com/edwber2205/challenge-telecom-x-part2/tree/main/champion/log/production">Resultados Pipeline Producción</a>
+* <a href="https://github.com/edwber2205/challenge-telecom-x-part2/tree/main/champion/log/monitor">Resultados Pipeline Monitoreo</a>
+
+Este enfoque no solo permitió construir un modelo predictivo sólido, sino también demostrar su aplicabilidad real en entornos simulados, sentando las bases para su escalado y mantenimiento en producción.
 
 ---
 
