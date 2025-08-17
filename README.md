@@ -26,31 +26,34 @@ A partir del dataset tratado en la Parte 1, se implementarán modelos de Machine
 
 Este proyecto sigue una estructura organizada para facilitar la comprensión y el acceso a los diferentes elementos:
 
-📁 challenge-telecom-x-part2
+## 📂 Estructura del Proyecto
+
+```plaintext
+challenge-telecom-x-part2/
 ├── 📄 proyecto_telecomX_ML.ipynb
-├── 📁 src/ # Contiene el dataset tratado y otros scripts auxiliares
-│   └── 📄 preprocessed_TelecomX_data.json
-    └── 📄 clientes_altovalor_abandonan.json
-    └── 📄 datos_artificiales_labeled.json
-    └── 📄 datos_artificiales_proba.json
-├── 📁 img/ # Carpeta para guardar visualizaciones generadas
-│   └── 📄 grafico_importante.png
-├── 📁 models/ # Modelos entrenados y serializados
-│   └── 📄 best_knn.pkl
-    └── 📄 best_logreg.pkl
-    └── 📄 best_randomforest.pkl
-    └── 📄 best_svm.pkl
-    └── 📄 best_xgb.pkl
-    └── 📄 features_best_logreg.pkl
-├── 📁 reports/ # Reportes y análisis generados
-│   └── 📄 informe_prevencion_churn.pdf
-    └── 📄 informe_prevencion_churn.pptx
-├── 📁 champion/ # Carpeta para producción y monitoreo del modelo final (champion)
+├── 📁 src/
+│   ├── preprocessed_TelecomX_data.json
+│   ├── clientes_altovalor_abandonan.json
+│   ├── datos_artificiales_labeled.json
+│   └── datos_artificiales_proba.json
+├── 📁 img/
+│   └── grafico_importante.png
+├── 📁 models/
+│   ├── best_knn.pkl
+│   ├── best_logreg.pkl
+│   ├── best_randomforest.pkl
+│   ├── best_svm.pkl
+│   ├── best_xgb.pkl
+│   └── características_best_logreg.pkl
+├── 📁 reportes/
+│   ├── informe_prevencion_churn.pdf
+│   └── informe_prevencion_churn.pptx
+├── 📁 campeon/
 │   └── 📁 log/
-│       ├── 📁 production/ # Modelos y logs de producción
-│       └── 📁 monitor/ # Logs para monitoreo del modelo
-├── 📄 requirements.txt # Lista de dependencias necesarias para ejecutar el proyecto
-└── 📄 README.md # Documentación del proyecto 
+│       ├── 📁 production/
+│       └── 📁 monitor/
+├── 📄 requisitos.txt
+└── 📄 README.md
 
 ---
 
